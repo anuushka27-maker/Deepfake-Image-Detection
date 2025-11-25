@@ -1,0 +1,37 @@
+# ===== IGNORE DATASETS =====
+Final_Dataset/
+Dataset/
+data/
+
+# ===== IGNORE MODEL WEIGHTS & OUTPUTS =====
+saved_model/
+training_graphs/
+checkpoints/
+
+#======Grad-CAM++========
+
+Visualisation/
+
+
+# Model weight formats
+*.h5
+*.pt
+*.pkl
+*.tflite
+
+# ===== IGNORE ENVIRONMENTS =====
+env/
+venv/
+tfenv/
+
+# ===== IGNORE PYTHON CACHE =====
+__pycache__/
+*.pyc
+
+# ===== IGNORE IDE & SYSTEM FILES =====
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ===== IGNORE LOGS =====
+*.log
