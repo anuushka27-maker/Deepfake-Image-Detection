@@ -1,4 +1,3 @@
-Hybrid CNN + ResNet50 | Grad-CAM++ | Streamlit UI | ROC | PR | Confusion Matrix 
 This Project is an end-to-end system for detecting Real VS Fake Images Deep-Learning. I built everything from scratch - Dataset Collection of ~141K Real & Fake Images, Dataset Clean-UP, Model Design, Training(GPU accelerating on WSL2), Interpretability Visualizations, and UI Deployment.
 It's not perfect, and it's still improving - but it works and it reflects my learning journey.
 
