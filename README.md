@@ -68,7 +68,7 @@ DEEPFAKE-IMAGE-DETECTION
 
 ▶️ Running the Application
 Run Streamlit App
-streamlit run "PATH_TO/app.py"
+streamlit run "/app.py"
 
 Predict Manually
 python detection.py --image /path/to/image.png
