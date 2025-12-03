@@ -1,105 +1,118 @@
-This Project is an end-to-end system for detecting Real VS Fake Images Deep-Learning. I built everything from scratch - Dataset Collection of ~141K Real & Fake Images, Dataset Clean-UP, Model Design, Training(GPU accelerating on WSL2), Interpretability Visualizations, and UI Deployment.
-It's not perfect, and it's still improving - but it works and it reflects my learning journey.
+Deepfake Image Detection — Hybrid CNN + ResNet50
 
-FEATURES
+An end-to-end Deep Learning system that detects whether a facial image is Real or AI-Generated (Fake).
+I built everything from scratch — from collecting and cleaning a dataset of ~141K images, designing and training a Hybrid CNN + ResNet50 architecture, performing detailed evaluation & interpretability, and finally deploying a usable Streamlit interface.
 
-1. HYBRID CNN-ResNet50 architecture
-2. Trained on ~141k real and fake face images collected from multiple sources
-3. Fine-tuned with Callbacks, Checkpoints & Learning Schedulers
-4. GPU-accelerated training using WSL2+CUDA+cuDNN
-5. Evaluation Metrics:
-   a. Confusion Matrix
-   b. ROC Curve
-   c. PR Curve
-6. Streamlit UI
-7. Grad-CAM++ visualization(interpretability)
+It’s not perfect — and it’s still improving — but it works, and it genuinely represents my learning, problem-solving and persistence.
 
-MODEL PERFORMANCE
+🚀 Key Features
 
-         METRIC                     RESULT                                  
-    Validation Accuracy             ~99.9%
-    Validation Loss                 ~0.009
-    Training PLatform               WSL2 GPU with Tensorflow
+Hybrid CNN + ResNet50 architecture
 
-Confusion Matrix, ROC Curve, PR Curve are too perfect.
+~141,000 real & fake facial images collected and cleaned manually
 
-Accuracy looks extremely high high - might indicate Dataset quality issues(Fake images much easier than real-world case).
-Working on improving generalisations & robustness.
+Trained with callbacks, checkpoints & cosine learning schedulers
 
-TECH STACK
+GPU-accelerated training using TensorFlow on WSL2 + CUDA + cuDNN
 
-          CATEGORY                             TOOLS
-          Dataset                            141,000 Real & Fake Images(~50-50%) 
-          Model                              RestNet50 + Hybrid CNN
-          Frameworks                         Tensorflow 2.15, Keras
-          GPU                                WSL2, CUDA 11.8, cuDNN 8.9
-          Evaluation                         sklearn, matplotlib, seaborn
-          UI                                 Streamlit
-          
-PROJECT STRUCTURES
+Evaluation metrics: Confusion Matrix, ROC Curve, PR Curve
 
+Grad-CAM++ Interpretability visualization
+
+Streamlit UI for real-time testing
+
+Fully reproducible, modular project structure
+
+📈 Model Performance
+
+                               Metric	                               Result
+                        Validation Accuracy                        	~99.9%
+                        Validation Loss	                           ~0.009
+                        Training Platform                     	WSL2 + CUDA-accelerated GPU
+                        Evaluation Insights	          Confusion Matrix, ROC & PR curves were near-perfect
+                        
+
+💡 Such extremely high accuracy likely indicates dataset imbalance or limited variability
+Current work focuses on improving robustness and generalization to real-world deepfakes.
+
+🧱 Tech Stack
+
+                     Category	                              Tools Used
+                     Dataset                 	~141k real & fake images (balanced 50-50)
+                     Model                          	Hybrid CNN + ResNet50
+                   Frameworks                       	TensorFlow 2.15, Keras
+                   GPU & System                      	WSL2, CUDA 11.8, cuDNN 8.9
+                   Evaluation                      	sklearn, matplotlib, seaborn
+                     Deployment                           Streamlit UI
+                  Visualization                            Grad-CAM++
+
+                  
+🗂 Project Structure
 DEEPFAKE-IMAGE-DETECTION
-            |___________Final_dataset
-            |___________models/
-            |               |______build_hybrid_CNN.py
-            |
-            |___________train.py
-            |
-            |___________checkpoints/
-            |               |______initial/
-            |               |         |____best_model.h5
-            |               |______fine-tune/
-            |                         |_____best_model.h5
-            |___________evaluation/
-            |               |______confusion_matrix.py
-            |               |______roc-curvepy
-            |               |______pr_curve.py
-            |
-            |___________visualisation
-            |               |______gradcam_pp.py
-            |___________app.py
-            |
-            |___________ README.md
+│—— Final_dataset/
+│—— models/
+│   └—— build_hybrid_CNN.py
+│   └—— train.py
+│   └—— checkpoints/
+│       └—— initial/best_model.h5
+│       └—— fine-tune/best_model.h5
+│—— evaluation/
+│   └—— confusion_matrix.py
+│   └—— roc_curve.py
+│   └—— pr_curve.py
+│—— visualization/
+│   └—— gradcam_pp.py
+│—— app.py
+│—— detection.py
+│—— README.md
 
-RUNNING THE APP
+▶️ Running the Application
+Run Streamlit App
+streamlit run "PATH_TO/app.py"
 
-------------------In VS Code WSL2 terminal run streamlit run "PATH_TO_app.py"---------------------
+Predict Manually
+python detection.py --image /path/to/image.png
 
-PREDICT MANUALLY
+🛠 Improvements in Progress
 
------------------python detection.py --image /path/to/image.png----------------------------------
+    1. Larger & more diverse real-world dataset
 
-IMPROEMENT IN PROGRESS 
+    2. Adversarial robustness testing
 
-1. More real-World Dataset
-2. Adversarial testing
-3. Better Grad-CAM++ results
-4. Video-Based Deepfake Detection
+    3. Better Grad-CAM++ interpretability
 
-MY LEARNING TAKEAWAYS
+    4. Temporal / video-based deepfake detection
 
-1. Setting Up GPU + CUDA + WSL2 was more harder than Training and Dataset collecting and cleanup
-2. Accuracy isn't everything-robustness matters more
-3. Interpretability matters in DeepLearning
-4. Debugging and Persistence is the Real Skills
-5. Dataset handling isn't just Downloading or collecting RAW. 
-6. Tensorflow is very Messy.
-7. Machine Learning isn't Just Training
+    5. ViT-based experimentation
 
-BUILT WITH
+📚 What I Learned
 
-CURIOSITY . CONSISTENCY . PERSISTENCE 
+    1. Setting up CUDA + cuDNN + TensorFlow on WSL2 was harder than model training itself 😅
+
+    2. Accuracy isn’t everything — robustness matters more
+
+    3. Interpretability is essential, not optional
+
+    4. Persistence > Talent
+
+    5.Dataset work = cleaning, balancing & understanding — not just downloading
+
+    6. Machine Learning is engineering + science + patience
+
+💛 Built With
+
+Curiosity · Consistency · Persistence
 I build, I experiment, I learn.
 
-AUTHOR
+👤 Author
 
-Anushka
-B-Tech CSE(AI/ML), Dr. A.P.J Abdul Kalam Technical University(AKTU)
-Machine Learning Full Stack AI Enthusiast
+Anushka Verma
+B-Tech CSE (AI/ML) | Dr. A.P.J Abdul Kalam Technical University (AKTU)
+Machine Learning • Full-Stack AI Developer • Deep Learning Enthusiast
 
-Portfolio Coming Soon
+📩 Email — anuushka27@gmail.com
 
-E-mail:- anuushka27@gmail.com
+🌐 Portfolio — Coming Soon
 
 
 
