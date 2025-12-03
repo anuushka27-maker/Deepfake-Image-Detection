@@ -25,8 +25,8 @@ Fully reproducible, modular project structure
 
 📈 Model Performance
 
-                               Metric	                               Result
-                        Validation Accuracy                        	~99.9%
+                               Metric	                             Result
+                        Validation Accuracy                        ~99.9%
                         Validation Loss	                           ~0.009
                         Training Platform                     	WSL2 + CUDA-accelerated GPU
                         Evaluation Insights	          Confusion Matrix, ROC & PR curves were near-perfect
