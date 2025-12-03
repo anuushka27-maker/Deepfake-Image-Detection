@@ -43,7 +43,7 @@ Fixing this is part of active improvement.
 
 🧪 Training Visualization
 
-<img src="results/train_loss.png" width="480"/> <img src="results/train_accuracy.png" width="480"/>
+<img src="Results/initial_epoch_15.png" width="480"/> <img src="Results/finetune_epoch_5.png" width="480"/>
 
 🏗 Tech Stack
 
