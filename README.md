@@ -39,7 +39,7 @@ Fixing this is part of active improvement.
 🖼 Evaluation Visuals
 
         Confusion Matrix	                                             ROC Curve                                      	PR Curve
-<img src="results/conf_matrix.png" width="300"/>	<img src="results/roc_curve.png" width="300"/>	<img src="results/pr_curve.png" width="300"/>
+<img src="Results/conf_matrix.png" width="300"/>	<img src="Results/roc_curve.png" width="300"/>	<img src="Results/pr_curve.png" width="300"/>
 
 🧪 Training Visualization
 
