@@ -106,7 +106,7 @@ I build, I experiment, I learn.
 
 👤 Author
 
-Anushka Verma
+Anushka 
 B-Tech CSE (AI/ML) | Dr. A.P.J Abdul Kalam Technical University (AKTU)
 Machine Learning • Full-Stack AI Developer • Deep Learning Enthusiast
 
