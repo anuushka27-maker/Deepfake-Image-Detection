@@ -1,103 +1,100 @@
-Deepfake Image Detection — Hybrid CNN + ResNet50
+🧠 Deepfake Image Detection — End-to-End Project
+Because truth matters — detecting what isn’t real.
 
-An end-to-end Deep Learning system that detects whether a facial image is Real or AI-Generated (Fake).
-I built everything from scratch — from collecting and cleaning a dataset of ~141K images, designing and training a Hybrid CNN + ResNet50 architecture, performing detailed evaluation & interpretability, and finally deploying a usable Streamlit interface.
+This project is an end-to-end Deep Learning system for detecting Real vs Fake facial images using a Hybrid CNN + ResNet50 architecture.
+I built everything from scratch — including dataset collection, preprocessing, model design, GPU training, evaluation, visualization, and deployment UI.
 
-It’s not perfect — and it’s still improving — but it works, and it genuinely represents my learning, problem-solving and persistence.
+It’s not perfect — and that’s intentional.
+This project reflects my research honesty, hands-on learning, experiments, failures, and improvement journey.
 
-🚀 Key Features
+🚀 Features
 
-Hybrid CNN + ResNet50 architecture
+    🧠 Hybrid CNN-ResNet50 Deepfake Classifier
 
-~141,000 real & fake facial images collected and cleaned manually
+    📦 ~141,000 Real & Fake face images (50-50 balance)
 
-Trained with callbacks, checkpoints & cosine learning schedulers
+    ⚙️ End-to-end pipeline: Dataset → Preprocess → Train → Evaluate → Deploy
 
-GPU-accelerated training using TensorFlow on WSL2 + CUDA + cuDNN
+    ⏳ GPU-accelerated training using WSL2 + CUDA
 
-Evaluation metrics: Confusion Matrix, ROC Curve, PR Curve
+    🎯 Metrics & Visualization: Confusion Matrix, ROC Curve, PR Curve
 
-Grad-CAM++ Interpretability visualization
+    🔍 Grad-CAM++ interpretability
 
-Streamlit UI for real-time testing
+💻 Streamlit UI Deployment
 
-Fully reproducible, modular project structure
+    🧪 Adversarial learning tests & generalization study
 
-📈 Model Performance
+📊 Model Performance
 
-                               Metric	                             Result
-                        Validation Accuracy                        ~99.9%
-                        Validation Loss	                           ~0.009
-                        Training Platform                     	WSL2 + CUDA-accelerated GPU
-                        Evaluation Insights	          Confusion Matrix, ROC & PR curves were near-perfect
-                        
+                      Metric                  	Result
+                 Validation Accuracy          	~99.9%
+                  Validation Loss              	~0.009
+                Training Platform        	WSL2 GPU — CUDA 11.8 + cuDNN 8.9
+                    Curves	              Confusion Matrix / ROC / PR Curve
 
-💡 Such extremely high accuracy likely indicates dataset imbalance or limited variability
-Current work focuses on improving robustness and generalization to real-world deepfakes.
+📌 The metrics look “too perfect” — indicating dataset bias and limited real-world robustness.
+Fixing this is part of active improvement.
 
-🧱 Tech Stack
+🖼 Evaluation Visuals
 
-                     Category	                              Tools Used
-                     Dataset                 	~141k real & fake images (balanced 50-50)
-                     Model                          	Hybrid CNN + ResNet50
-                   Frameworks                       	TensorFlow 2.15, Keras
-                   GPU & System                      	WSL2, CUDA 11.8, cuDNN 8.9
-                   Evaluation                      	sklearn, matplotlib, seaborn
-                     Deployment                           Streamlit UI
-                  Visualization                            Grad-CAM++
+        Confusion Matrix	                                             ROC Curve                                      	PR Curve
+<img src="results/conf_matrix.png" width="300"/>	<img src="results/roc_curve.png" width="300"/>	<img src="results/pr_curve.png" width="300"/>
 
-                  
-🗂 Project Structure
-DEEPFAKE-IMAGE-DETECTION
-│—— Final_dataset/
-│—— models/
-│   └—— build_hybrid_CNN.py
-│   └—— train.py
-│   └—— checkpoints/
-│       └—— initial/best_model.h5
-│       └—— fine-tune/best_model.h5
-│—— evaluation/
-│   └—— confusion_matrix.py
-│   └—— roc_curve.py
-│   └—— pr_curve.py
-│—— visualization/
-│   └—— gradcam_pp.py
-│—— app.py
-│—— detection.py
-│—— README.md
+🧪 Training Visualization
 
-▶️ Running the Application
-Run Streamlit App
-streamlit run "/app.py"
+<img src="results/train_loss.png" width="480"/> <img src="results/train_accuracy.png" width="480"/>
 
-Predict Manually
-python detection.py --image /path/to/image.png
+🏗 Tech Stack
 
-🛠 Improvements in Progress
+                         Category	                         Tools
+                          Model	                    Hybrid CNN + ResNet50
+                        Framework	                  TensorFlow 2.15, Keras
+                          GPU                    	WSL2 + CUDA 11.8 + cuDNN 8.9
+                           UI                           	Streamlit
+                      Visualization	            Grad-CAM++, Matplotlib, Seaborn
+                      
+📂 Project Structure
 
-    1. Larger & more diverse real-world dataset
+          Deepfake-Image-Detection
+                │── dataset/
+                │── results/
+                │    ├── conf_matrix.png
+                │    ├── roc_curve.png
+                │    └── pr_curve.png
+                │── models/
+                │── evaluation/
+                │── visualisation/
+                │── app.py
+                │── train.py
+                │── README.md
 
-    2. Adversarial robustness testing
+▶️ Run the Project
 
-    3. Better Grad-CAM++ interpretability
+Run Streamlit UI
+streamlit run app.py
 
-    4. Temporal / video-based deepfake detection
 
-    5. ViT-based experimentation
+🌱 Future Improvements
 
-📚 What I Learned
+    Vision Transformers (ViT / Swin-T)
 
-    1. Setting up CUDA + cuDNN + TensorFlow on WSL2 was harder than model training itself 😅
+    Frequency-domain analysis (FFT / DCT)
 
-    2. Accuracy isn’t everything — robustness matters more
+    Temporal video-based deepfake detection
 
-    3. Interpretability is essential, not optional
+    Improved Grad-CAM++ heatmaps
 
-    4. Persistence > Talent
+    Larger diverse real-world dataset
 
-    5.Dataset work = cleaning, balancing & understanding — not just downloading
+🧠 My Learning Takeaways
 
-    6. Machine Learning is engineering + science + patience
+✨ GPU + CUDA + WSL2 setup was harder than training itself
+✨ Accuracy isn’t everything — robustness matters
+✨ Interpretability matters more than flashy numbers
+✨ Dataset handling isn’t copy-paste — it’s engineering
+✨ Machine Learning isn’t just running .fit() — it’s persistence and debugging
+
 
 💛 Built With
 
