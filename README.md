@@ -111,6 +111,10 @@ Machine Learning • Full-Stack AI Developer • Deep Learning Enthusiast
 
 🌐 Portfolio —  https://anushkadev.vercel.app
 
+## License
+This project is released under the MIT License. See the LICENSE file for details.
+
+
 
 
 
