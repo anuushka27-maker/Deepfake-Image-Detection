@@ -109,7 +109,8 @@ Machine Learning • Full-Stack AI Developer • Deep Learning Enthusiast
 
 📩 Email — anuushka27@gmail.com
 
-🌐 Portfolio — Coming Soon
+🌐 Portfolio —  https://anushkadev.vercel.app
+
 
 
 
